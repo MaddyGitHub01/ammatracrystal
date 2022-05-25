@@ -9,7 +9,10 @@
   <title>Amaatra Crystal</title>
 
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css'>
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css'>
@@ -221,14 +224,14 @@ h4{
     position: relative;
     overflow: hidden;
 }
-.aminites .box {
-  height: 300px;
-}
-.aminites{
+
+.aminites {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
+    align-content: baseline;
 }
 
 .abs_hov{
@@ -451,9 +454,6 @@ h4{
     width: 95%;
     margin: 0 auto;
   }
-  .box {
-  width: 19 !important;
-}
 }
 
 
@@ -536,7 +536,9 @@ h4{
     width: 100% !important;
   }
 }
-
+.slick-list {
+  height: 100vh !important;
+}
 </style>
 
 
@@ -669,7 +671,7 @@ The Township spreads over 30 acres of land with lots of green area and a superla
 
           <div class="box" style="">
             <img src="images/a7.jpg">
-            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Jogging Gardens/label></div>
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Jogging Gardens</label></div>
           </div>
 
           <div class="box" style="">
@@ -871,21 +873,24 @@ Well managed basement parking.<br/>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js'></script>
   <script src='https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js'></script>
   
-  <script id="rendered-js" >
+<script id="rendered-js" >
 const slider = $(".slider-item");
 slider.slick({
+  mobileFirst: false,
   dots: false,
-   speed: 3000,
+   speed: 2000,
    autoplay:false,
-  slidesToShow: 1,
+   slidesToShow: 1,
    fade: false,
   cssEase: 'linear', 
+   lazyLoad: 'progressive',
   adaptiveHeight: true,
   responsive: [{
       breakpoint: 900,
       settings: "unslick",
       infinite: true,
-    }]
+      mobileFirst: true,
+    }],
  });
 
 
@@ -898,7 +903,6 @@ slider.on('wheel', function (e) {
     $(this).slick('slickPrev');
   }
 });
-
 
     </script>
 
