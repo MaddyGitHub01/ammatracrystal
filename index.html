@@ -893,7 +893,8 @@ slider.slick({
   mobileFirst: false,
   dots: false,
    speed: 2000,
-   autoplay:false,
+   autoplay: true,
+  autoplaySpeed: 5000,
    slidesToShow: 1,
    fade: false,
   cssEase: 'linear', 
@@ -916,7 +917,9 @@ slider.on('wheel', function (e) {
   } else {
     $(this).slick('slickPrev');
   }
+
 });
+
 
     </script>
 
