@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+
+
+  <title>Contact</title>
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel='stylesheet' href='https://unpkg.com/swiper@6.5.4/swiper-bundle.min.css'>
+
+<style>
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  color: #000;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+/*.container {
+  margin-left:auto;
+  margin-right:auto;
+  width: 80%;
+  color: #333;
+  
+}*/
+
+.slick-slide {
+  text-align: center;
+  background: white;
+  margin:0px;
+}
+
+h4{
+  text-align:center;
+}
+.header{
+  position: relative;
+    width: 100%;
+    background:#ffffff;
+    opacity: 0.9;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.logo {
+  width: 75px;
+  position: fixed;
+  vertical-align: middle;
+  margin: 10px 25px 0px 25px;
+}
+.logo img {
+  width: 100%;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 68%;
+  margin: 0 auto;
+}
+.table {
+  display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.tb-cell {
+  width: 34%;
+}
+.col {
+  display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+}
+.cell {
+  width: 32%;
+}
+.cell-inner {
+  background: #1e2226;
+  width: 100%;
+  text-align: center;
+  color: #c6a47e;
+  padding: 25px 0;
+  margin-top: 20px;
+  font-weight: 600;
+  min-height: 185px;
+  position: relative;
+  letter-spacing: 1px;
+}
+.cell-inner .fa {
+  font-size: 48px;
+}
+.cell-inner h4 {
+  color: #fff;
+  font-size: 24px;
+}
+.cell-inner p {
+  padding: 0 25px;
+  margin: 0;
+}
+.cell-inner:before {
+    top: 0px;
+    border-radius: 0 0 10px 10px;
+}
+.cell-inner:before, .cell-inner:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: visible;
+    background: #c6a47e;
+    height: 5px;
+    margin: auto;
+}
+.cell-inner:after {
+    bottom: 0px;
+    border-radius: 10px 10px 0 0;
+}
+.cell-inner:hover:before {
+    opacity: 1;
+    visibility: visible;
+    top: 0px;
+}
+.cell-inner:hover:after {
+    opacity: 1;
+    visibility: visible;
+    bottom: 0px;
+}
+.season-cell {
+    display: table-cell;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 23%;
+    color: #fff;
+    /* vertical-align: middle; */
+    background: #1e2226;
+}
+.season-cell h2 {    
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+.season-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0;
+    border-bottom: 1px solid #dbd8d8;
+
+
+}
+.season-inner i {
+    padding-right: 10px;
+    font-size: 22px;
+  }
+input {
+    width: 100%;
+    height: 35px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #747272;;
+}
+textarea {
+  background: transparent;
+  color: #fff;
+  width: 78.6%;
+  border: 1px solid #747272;;
+}
+.download {
+  width: 180px;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    letter-spacing: 0px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #5a4227;
+    margin: 42px auto 0 auto;
+    color: #fff;
+    text-align: center;
+}
+form {
+      background: #000;
+    padding-bottom: 55px;
+    margin-bottom: 25px;
+}
+footer {
+    width: 100%;
+    background: #1e1d1d;
+    padding: 1px 0;
+}
+footer p {
+  font-size: 15px; text-align: center; color: #fff;
+}
+.location {
+      width: 100%;
+      background: #1e2226;
+    /* height: 500px; */
+    display: table;
+    vertical-align: middle;
+}
+
+.product-thumbs .swiper-slide img {
+  border:2px solid transparent;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product-thumbs .swiper-slide-active img {
+    border-color: #860e0e;
+    box-shadow: 2px 2px 2px #000;
+    width: 150px;
+    border-radius: 100%;
+    z-index: 111;
+    /*width: 100.333px;
+    transition-duration: 0ms;
+    transform: translate3d(11.5282px, 0px, 0px) rotateX(0deg) rotateY(0deg);
+    z-index: 1;
+    margin-right: 15px;*/
+
+
+}
+.product-slider .swiper-button-next:after,
+.product-slider .swiper-button-prev:after {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
+.swiper-slide-active {
+  z-index: 1;
+}
+.img-fluid {
+  width: 100px;
+  border-radius: 53px;
+}
+.content {
+  background: #1e2226;
+    color: #fff;
+    padding: 35px;
+    text-align: center;
+    white-space: normal;
+    display: block;
+}
+.content p {
+    width: 85%;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 15px;
+}
+.th-bx {
+  width: 100px;
+} 
+.swiper-slide {
+  margin: 15px auto 25px auto;
+  text-align: center;
+}
+
+/*.swiper-slide.th-bx.swiper-slide-active:before {
+    content: '';
+    width: 0;
+    right: 201px;
+    top: 151px;
+    z-index: -1;
+    position: absolute;
+    border-top: solid 22px #860e0e;
+    border-left: solid 22px transparent;
+    border-right: solid 22px transparent;
+    position: absolute;
+}
+*/
+.it-heading h4 {
+    margin-top: 55px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    font-weight: 600;
+    z-index: 1;
+    color: #c6a47e;
+}
+
+.it-heading h2 {
+    text-transform: capitalize;
+    font-weight: 700;
+    z-index: 2;
+    position: relative;
+    margin: 6px 0 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    line-height: 43px;
+    margin: 0px 0 50px 0;
+}
+.surrounding {
+  color:#fff; margin: 45px auto 62px auto; text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .cell, .tb-cell, textarea {width: 100%;}
+    .table {
+      display: table;
+    }
+  }
+
+</style>
+
+
+</head>
+
+<body style="background-color: transparent; background-repeat: no-repeat; background-image: url(images/black-bg.jpeg); background-size: cover; background-position: 50% 50%; height: 100%; opacity: 1; top: 0px; left: 0px; visibility: inherit; z-index: 20;">
+  <div class='container-fluid' style="width: 100%;">
+    <div class="header" style="">
+      <div class="logo">
+        <a href="index.html"><img src="https://services.google.com/fh/files/emails/crystal_logo1.png" alt="" /></a>
+      </div>
+      <div class="logo" style="width: 35px; padding-top: 14px; padding-right: 25px; right:0;">
+        <i class="bi bi-person-lines-fill"></i>
+      </div>
+    </div>
+  </div>
+    
+  <h1 class="surrounding" style="">CONTACT US</h1>
+  <div class='container' >
+    <div class="table location" style="background: #1e2226; margin-top: 35px;">
+      <div class="col"><img src="images/location.jpg" style="padding-left: 25px;" /></div>
+      <div class="col" style="width: 40%;">
+        <div class="season-cell" style="">
+          <h2>Location Benefits</h2>
+          <div class="season-inner" style=""><span>Greater Noida West</span> <span>5 min</span></div>
+          <div class="season-inner"><span>Noida and Indirapuram</span> <span>10 min</span></div>
+          <div class="season-inner"><span>Anand Vihar</span> <span>20 min</span></div>
+          <div class="season-inner"><span>New Delhi</span> <span>30 min</span></div>
+          <div class="season-inner" style="border-bottom: none; padding-bottom:0;"><span>Eastern Peripheral Expressway</span> <span>5 min</span></div>
+          <!--  <div class="season-inner"><span><i class="fa fa-plane" aria-hidden="true"></i> AirPort</span> <span>158 Sq</span></div>
+            <div class="season-inner"><span><i class="fa fa-tree" aria-hidden="true"></i> Park</span> <span>158 Sq</span></div> -->
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+  <div class='container'>
+    <div class="flex-container" style="margin-top: 25px; justify-content: space-between;">
+      <div class="cell">
+        <div class="cell-inner">
+        <div><i class="fa fa-phone" aria-hidden="true"></i></div>
+        <h4>Contact</h4>
+        <p>1800 103 4240</p>
+      </div>
+      </div>
+      <div class="cell">
+        <div class="cell-inner">
+        <div><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+        <h4>Address</h4>
+        <p>GH-02 ,Jaipuria Sunrise Township, NH-24<br>Opp. Manipal Hospital, Ghaziabad(UP)</p>
+      </div>
+      </div>
+      <div class="cell">
+        <div class="cell-inner">
+        <div><i class="fa fa-paper-plane-o" aria-hidden="true"></i></div>
+        <h4>Email</h4>
+        <p>sales@amaatragroup.com</p>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='container'>
+    <div>
+      <form style="background: #1e2226;">
+        <div class="it-heading">
+        <h4 style="padding-top: 45px; margin-bottom: 15px;">HAVE A QUESTION? </h4>
+        <h2>WE ARE GLAD TO CONSULT YOU!</h2>
+      </div>
+        <!-- <h2 style="color: #fff;
+    text-align: center;
+    font-size: 36px;
+    margin-top: 55px;
+    padding-top: 55px;">HAVE A QUESTION? <br/>WE ARE GLAD TO CONSULT YOU!</h2> -->
+        <div class="table">
+          <div class="tb-cell"><input type="text" id="fname" name="fname" value="Name"></div>
+          <div class="tb-cell"> <input type="tel" id="phone" name="phone" value="Contact" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></div>
+        </div>
+        <div class="table">
+        <textarea id="" name="Message" rows="10" cols="92" style="margin-top: 25px;" value="Details"></textarea>
+      </div>
+      <a class="download" href="">Send Message</a>
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <div class="container" style="">
+    <div class="row">
+      <div class="it-heading">
+        <h4>OUR MANAGEMENT</h4>
+        <h2>What They Says</h2>
+        <div class="swiper-container product-thumbs">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide th-bx" style="width: 100px !important">
+                <img src="images/mg1.jpg" alt="..." class="img-fluid">
+              </div>
+              <div class="swiper-slide th-bx" style="width: 100px !important">
+                <img src="images/mg2.jpg" alt="..." class="img-fluid">
+              </div>
+              <div class="swiper-slide th-bx" style="width: 100px !important">
+                <img src="images/mg3.jpg" alt="..." class="img-fluid">
+              </div>
+              <div class="swiper-slide th-bx" style="width: 100px !important">
+                <img src="images/mg4.jpg" alt="..." class="img-fluid">
+              </div>
+              <div class="swiper-slide th-bx" style="width: 100px !important">
+                <img src="images/mg5.jpg" alt="..." class="img-fluid">
+              </div>
+            
+            </div>
+          </div>
+
+
+          <div class="swiper-container product-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="content">
+                  <h2 style="margin-bottom: 16px;">Mr. Mahender Bansal</h2>
+                  <p>Our Philosophy is to exploit the lands as the best resource of our nation in the process of planning and development. I would like to thank all of our clients and associates for their trust and support, without which our success won’t be possible.</p></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content">
+                  <h2 style="margin-bottom: 16px;">Mr. Rupesh Agarwal</h2>
+                  <p>We at ‘Amaatra Group’ stands for unprecedented growth and extra-ordinary commitment for making a better tomorrow. We set ourselves apart from every other construction company simply by our strong philosophy and work culture.</p></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content">
+                   <h2 style="margin-bottom: 16px;">Mr. Rajesh Chopra</h2>
+                   <p>We have an ambition to raise the bar in the way people live, work and play while improving their quality of lives. Not just to create dreams, we strive to make them reality and we do not rest till we achieve our promises.</p></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content">
+                   <h2 style="margin-bottom: 16px;">Mr. Umesh Gupta</h2>
+                   <p>With a will to do that something extra for mankind we strive to achieve excellence 
+in all our undertaken construction activities. For us the 'Sky is the Limit' and we constantly strive to redefine 
+the paradigm of affordable luxury for our consumers. We are an organization that is guided by strong ethos 
+and principles and it is our constant endeavor to build unmatched structures with innovative designs.</p></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content">
+                   <h2 style="margin-bottom: 16px;">Mr. Mukesh Agarwal</h2>
+                   <p>Our commitment to provide world-class housing properties has been the driving 
+force of our success.  The Group is motivated by a zest of providing its consumers with unmatched designs 
+and excellent facilities while building projects that not only uplift people’s lives but also adds value to the 
+nation’s economy. 
+</p></div>
+              </div>
+              
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          
+          
+        
+      </div>
+    </div>
+  </div>
+
+
+  <footer><p style="">Copyright © 2022 Amaatra Group. All Rights Reserved.</p></footer>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <script src='https://unpkg.com/swiper@6.5.4/swiper-bundle.min.js'></script>
+ 
+ <script id="rendered-js" >
+/* product left start */
+if ($(".it-heading").length) {
+  var productSlider = new Swiper('.product-slider', {
+    spaceBetween: 0,
+    centeredSlides: false,
+    loop: true,
+    direction: 'horizontal',
+    loopedSlides: 5,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev" },
+
+    resizeObserver: true });
+
+  var productThumbs = new Swiper('.product-thumbs', {
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    autoplay:{
+      delay: 5500,
+      disableOnInteraction: false,
+    },
+    slideToClickedSlide: true,
+    direction: 'horizontal',
+    slidesPerView: 3,
+    loopedSlides: 5 });
+
+  productSlider.controller.control = productThumbs;
+  productThumbs.controller.control = productSlider;
+
+}
+/*  product left end */
+    </script>
+
+  
+
+</body>
+
+</html>

@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+
+
+  <title>Amaatra Crystal</title>
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  color: #000;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  /*overflow: hidden;*/
+  color: #000;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  /*-ms-scroll-chaining: none;
+  overscroll-behavior: none;*/
+  background: #fafafa;
+}
+.slick-track {
+  height: 100vh;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+/*.container {
+  margin-left:auto;
+  margin-right:auto;
+  width: 80%;
+  color: #333;
+  
+}*/
+
+.slick-slide {
+  text-align: center;
+  background: white;
+  margin:0px;
+}
+
+h4{
+  text-align:center;
+}
+.header{
+  position: relative;
+    width: 100%;
+    background:#ffffff;
+    opacity: 0.9;
+    z-index: 11111;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.logo {
+  width: 75px;
+  position: fixed;
+  vertical-align: middle;
+  margin: 10px 25px 0px 25px;
+}
+.logo img {
+  width: 100%;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.about{
+  width: 100%;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.verticle-tab {
+  width: 100%;
+  /*background: #fff; none*/
+  display: table;
+  height: 500px;
+  margin: 0 auto;
+}
+.lates-project {
+  width: 100%;
+    background: #282d31;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.about .child {
+  width: 33.33%;
+}
+.about_head {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    font-weight: 700;
+    color: #c6a47e;
+}
+.about-deatils {
+  color: #253046;
+  font-weight: 400;
+    line-height: 1.5;
+    font-size: 15px;
+}  
+.about-deatils1{
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  background: #121212ab;
+  padding: 25px;
+  /* opacity: 0.9; */
+  /* border: 1px solid; */
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px #8c8787;
+}
+.about-deatils1 h4 {
+    font-weight: 900;
+    /*font-style: italic;*/
+    text-shadow: 0px 0px 5px #000;
+    color: #a77e51;
+}
+
+.about_subhead{
+  font-size: 40px;
+  font-weight: 700;
+}
+.download {
+  width: 180px;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    letter-spacing: 0px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #9f7648;
+    margin: 42px auto 0 auto;
+    color: #fff;
+}
+.download.pricing {
+  position: absolute;
+  width: 29%;
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 50px;
+  font-weight: 600;
+  z-index: 11;
+  letter-spacing: 1px;
+  padding: 7px 25px;
+  border: 1px solid #000;
+  box-shadow: 0px 0px 5px #000;
+}
+.slick-prev, .slick-next {
+  display: none !important;
+}
+.thumb {
+  width: 340px;
+    padding: 0;
+    margin: 0 auto;
+}
+.about-deatils1.thumb img {
+  width: 100%;
+}
+.logo > .home {
+  display: none;
+}
+.big-logo {
+  margin: auto;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 10px;
+    /*box-shadow: 0px 0px 25px #000;*/
+}
+.big-logo img {
+  opacity: 0.7;
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+.big-logo h1, .big-logo h3{
+  margin-bottom: 0; color:#fff; text-shadow: -6px 0px 5px #000; letter-spacing: 2px;
+      font-size: 2em;
+    margin-top: 1em;
+}
+.big-logo h3{
+  margin-bottom: 0;
+    color: #eee9e9;
+    text-shadow: -6px 0px 5px #000;
+    font-size: 4rem;
+    margin-top: 25px;
+    letter-spacing: 2px;
+}
+.box {
+  width: 20%;
+    margin: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.aminites .box {
+  height: 300px;
+}
+.aminites{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.abs_hov{
+  position: absolute;
+    height: 100%;
+    font-size: 22px;
+    text-shadow: 0px 0px 5px black;
+    font-weight: bold;
+    top: 0;
+    display: table;
+    width: 100%;
+    color: #fff;
+    background: #1d1b1b47;
+    z-index: 1;
+}
+.abs_hov label {
+  display: table-cell;
+  vertical-align: middle;
+      transition: all .5s ease 0s;
+}
+.abs_hov label:hover {
+  transform: scale(1.2);
+      transition: all .5s ease 0s;
+}
+.box img {
+  width: 100%;
+ /* transform: scale(1.0);*/
+      transition: all .5s ease 0s;
+}
+.delivered {
+  width: 50%;
+}
+.delivered .delivered-box{
+  width: 90%;
+  display: table;
+  margin: 0 auto;
+  border-spacing: 12px;
+  border: 5px solid #775935;
+}
+.delivered .download {
+  margin: 42px 0 0 0;
+}
+
+
+
+.season_tabs {
+  position: relative;   
+  min-height: 360px; 
+  clear: both;
+  margin: 25px auto;
+  width: 85%;
+  font-family: 'Rubik', sans-serif;
+}
+.season_tab {
+  float: left;  
+  clear: both;
+  width: 286px;
+}
+.season_tab label {
+  /* background: #fbfaf8;
+    padding: 20px 28px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #282828;
+    margin-left: -1px;
+    text-align: left;
+    vertical-align: middle;
+    position: relative;
+    left: 1px;
+    width: 264px;
+    display: table-cell;
+    border-bottom: 1px solid #d6d2d2;*/
+    background: #0f0f0fc7;
+    padding: 20px 28px;
+    font-size: 19px;
+    font-weight: 600;
+    color: #fff;
+    margin-left: -1px;
+    /* height: 500px; */
+    text-align: left;
+    vertical-align: middle;
+    position: relative;
+    left: 1px;
+    width: 264px;
+    display: table-cell;
+    border-bottom: 1px solid #d6d2d2;
+}
+.season_tab [type=radio] {
+  display: none;   
+}
+.season_content {
+  position: absolute;
+  top: 0;
+  left: 286px;
+  /*background: white;*/
+  right: 0;
+  bottom: 0;
+  padding: 0 20px;
+  text-align: left;
+ }
+.season_content span {
+  animation: 0.5s ease-out 0s 1 slideInFromTop; 
+  text-align: left;
+}
+
+[type=radio]:checked ~ label {
+  background: white;
+  color: #c6a47e;
+  border-bottom: 1px solid #c6a47e;
+  z-index: 2;
+}
+[type=radio]:checked ~ label ~ .season_content {
+  z-index: 1;
+}
+.season-holder {/*display: table;width: 100%;none*/ display: flex;
+    justify-content: space-evenly;
+    width: 100%; }
+
+/*.season-cell {
+    display: table-cell;
+    width: 25%;
+    text-align: center;
+    vertical-align: middle;
+    background: #ffffff;
+  
+} none*/
+.season-cell {
+        /* display: table-cell; */
+    /* width: 25%; */
+    text-align: left;
+    vertical-align: top;
+    background: #;
+    /* height: 500px; */
+    width: 440px;
+/*    border: 5px solid #874e05;*/
+    background: #0f0f0f42;
+    /* margin-right: 10px; */
+    padding-left: 17px;
+}
+/*.season-inner {
+  display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 15px 0;
+    color: #535151;
+
+}*/
+.season-inner {
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* width: 100%; */
+    /* height: 500px; */
+    padding: 15px 0;
+    color: #fff;
+    /* margin-right: 13px; */
+    /*background: #ffffff4f;*/
+    /* border: 5px solid orange; */
+    /* padding-right: 10px; */
+}
+.season-inner td, .season-inner th {
+  width: 146px;
+}
+.season-inner th {
+  color: #d58050;
+  font-size: 24px;
+}
+.season-inner td {
+  font-size: 20px;
+}
+/*.site-img {
+    display: table-cell;
+    width: 25%;
+    padding: 15px 15px;
+    background: #fff;
+    border: 15px solid #fbfaf8;
+} none*/
+.site-img {
+    /* display: table-cell; */
+    /* width: 25%; */
+    padding: 15px 15px;
+   background: #fefefe;
+    border: 5px solid #884d04;
+    /* padding-right: 10px; */
+}
+.site-img img {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  padding: 15px 25px;
+  /*background: #fff; none*/
+  overflow: hidden;
+}
+.contact {
+  position: fixed;
+  z-index: 111;
+  top: 45%;
+  right: 0px; 
+}
+.contact a {
+  /*background: #bc961e;*/
+  /*padding: 8px 7px;*/
+  width: 51px;
+  display: block;
+  /*box-shadow: 0px 0px 5px #000;*/
+  color: #fff;
+}
+.aminite-head {
+  font-size: 32px;
+  letter-spacing: 2px;
+  line-height: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase; 
+  margin-bottom: 16px; 
+  margin-top: 22px; 
+  color:#fff;
+}
+
+@media only screen and (max-width: 1440px) {
+  .season_tabs {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .box {
+  width: 19 !important;
+}
+}
+
+
+@media only screen and (max-width: 900px) {
+  .about .child, .delivered {
+    width: 100% !important;
+    display: block !important;
+    height: auto !important;
+  }
+.download {
+    z-index: 111;
+    /*position: absolute;
+    width: 60%;
+    font-size: 21px;
+    padding: 5px 15px;
+    text-align: center;
+    box-shadow: 0px 0px 5px #000;
+    margin: 50px auto 50px auto;*/
+    } 
+.box {
+    width: 30.33%;
+    margin: 8px 8px 8px 8px;
+  }
+  .abs_hov label {
+    text-align: center;
+    font-size: 18px;
+  }
+  .download.pricing {
+    position: absolute;
+    width: 70%;
+    font-size: 21px;
+    padding: 5px 15px;
+    text-align: center;
+    box-shadow: 0px 0px 5px #000;
+  }
+  .big-logo h1, .big-logo h3 {
+    text-align: center;
+  }
+  .aminite-head { 
+    padding-top: 42px;
+    text-align: center;
+    margin-top: 0; 
+  }
+  .season_tabs, .season_tab {
+    margin-top: 0 !important;
+  }
+
+  .season_tab {
+    width: 100% !important;
+  }
+  .season_content {
+    position: relative !important;
+    left: 0 !important;
+  }
+  .aminites .box {
+    height: 100% !important;
+  }
+  .season-cell {
+    display: block;
+    width: 100%;
+  }
+  .site-img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 55px 0px;
+  }
+  .site-img img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .big-logo h3 {
+    font-size: 3rem;
+  }
+  .delivered {
+    width: 50%;
+    margin-top: 100px;
+  }
+  .about-deatils {
+    width: 100% !important;
+  }
+}
+
+</style>
+
+
+</head>
+
+<body>
+  <div class='container-fluid'>
+    <div class="contact"><a href="contact.html"><img src="images/contact-us.png"/></a></div>
+    <div class='slider-item'>
+      <div class="slide-element home" style="background-color: transparent; background-repeat: no-repeat; background-image: url(images/home-banner.jpg); background-size: cover; background-position: 50% 50%; max-width: 1920px;width: 100%; height: 100%; opacity: 1; top: 0px; left: 0px; visibility: inherit; z-index: 20;">
+      <div class="flex-container">
+        <div class="big-logo">
+          <a href="#"><img src="https://services.google.com/fh/files/emails/crystal_logo1.png" alt="" style="" /></a>
+        <h1 style="">AMAATRA CRYSTAL</h1>
+        <h3 style="">COMMITTED TO EXCELLENCE</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- slide2 start -->
+    <div class="slide-element">
+     <div class="header" style="">
+      <div class="logo" style="">
+        <a href="#"><img src="https://services.google.com/fh/files/emails/crystal_logo1.png" alt="" /></a>
+      </div>
+     </div>
+      <div class="about">
+        <div class="child" style="background-color: transparent; background-repeat: no-repeat; background-image: url(images/vision.png); background-size: cover; background-position: 50% 50%; height: 100%; opacity: 1; top: 0px; left: 0px; visibility: inherit; z-index: 20;">
+          <div class="flex-container" style="align-items: flex-start;">
+            <div style="padding: 80px 40px; ">
+              <div class="about-deatils1" style="">
+              <h1 style="color:#c6a47e; margin-top: 0;">Vision</h1>
+              <h4>"Daring visions for uniquely inspiring projects…"</h4>
+              <p>Our vision is to create new landmarks, offer optimum solutions to a broad spectrum of society, grow in the field of construction, add value to your investment and surpass customer expectation.</p>
+
+<p>We aspire to develop real estate projects that are disruptively unique, yet authentic to the surroundings, so that we can simultaneously surpass the norm of ‘living’ and enrich the society at large while commemorating the beauty of the local culture and heritage.</p>
+
+<p>To be the most respected real estate builder, assure highest standards in quality, excel in Design and Service.</p>
+
+ <p>We at Amaatra Crystal Group foresee a bright future moving forward together with our stakeholders and partners, creating iconic projects that push the boundary of living and growing our portfolio.</p>
+
+</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="child">
+          <div class="flex-container" style="background-color: #fff; align-items: flex-start;">
+            <div style="padding: 80px 55px;">
+              <p class="about_head">About Us</p>
+              <h1 class="about_subhead" style="margin-bottom: 0; color:#253046;">
+                <em style="color: #c6a47e; font-style: normal;">Amaatra,</em> a Sanskrit word, literally means <em style="color: #c6a47e; font-style: normal;">‘limitless’</em>.
+              </h1>
+
+              <p class="about-deatils" style="align-items: flex-start;">
+                Amaatra CRYSTAL is a Joint venture Project of AMAATRA GROUP and SB GROUP.<br><br>
+              Amaatra Crystal is an upcoming Residential Project placed at Plot No. GH-02, Jaipuria Sunrise Township, NH 24 , Ghaziabad (UP) which includes all the facilities and amenities. 
+<br><br>
+The Project offers 2BHK,3BHK and 4BHK apartments with the sizes ranging from 1045 Sq.ft. to 2525 Sq.ft. available for all residential buyers. 
+<br><br>
+The Township spreads over 30 acres of land with lots of green area and a superlative design. 
+</p>
+
+              <a class="download" href="/ac-brochure.pdf">Download E-Brochure</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="child" style="background-color: transparent; background-repeat: no-repeat; background-image: url(images/mission.png); background-size: cover; background-position: 50% 50%; height: 100%; opacity: 1; top: 0px; left: 0px; visibility: inherit; z-index: 20;">
+          <div class="flex-container" style="align-items: flex-start;">
+            <div style="padding: 80px 40px;">
+              <div class="about-deatils1" style="">
+              <h1 style="color:#c6a47e; margin-top: 0;">Mission</h1>
+              <h4>"Our mission is to ‘transcend the expected’…"</h4>
+              <p>To build world class real estate concepts with highest standards of ethics, professionalism and quality. To explore diverse areas of growth within the field of construction and encompassing entire gamut of residential, commercial and retail complexes.</p>
+
+<p>With a strong determination to challenge the extent of people’s imagination and the boundary of ‘living’.</p> 
+
+<p>All of Amaatra Group’s projects aim to establish new standards of how people live and exceed the industry’s benchmarks. </p>
+
+<p>Our project is not only delivering what is required in terms of quality, but beyond limit-pushing concepts, flawless delivery, harmony with nature and the betterment of society. </p>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- slide3 start -->
+    <div class="slide-element" style="background-color: transparent; background-repeat: no-repeat; background-image: url(images/black-bg.jpeg); background-size: cover; background-position: 50% 50%; height: 100%; opacity: 1; top: 0px; left: 0px; visibility: inherit; z-index: 20;">
+      
+      <div class="header" style="">
+      <div class="logo" style="">
+        <a href="#"><img src="https://services.google.com/fh/files/emails/crystal_logo1.png" alt="" /></a>
+      </div>
+     </div>
+      <h2 class="aminite-head" style="">AMAATRA CRYSTAL - SMART AMENITIES</h2> 
+      <div class="aminites" style="">
+     
+          <div class="box" style="">
+              <img src="images/a1.jpeg">
+              <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Fitness Centers</label></div>
+          </div>
+
+          <div class="box" style="">
+            <img src="images/a2.jpeg">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Swimming pool</label></div>
+          </div>
+
+          <div class="box" style="">
+            <img src="images/a3.jpeg">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Library</label></div>
+          </div>
+
+          <div class="box" style="">
+            <img src="images/a4.jpeg">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Kids Playground</label></div>
+          </div>
+        
+
+
+          <div class="box" style="">
+            <img src="images/a5.jpg">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Badminton Court</label></div>
+          </div>
+
+          <div class="box" style="">
+            <img src="images/a6.png">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Club House</label></div>
+          </div>
+
+          <div class="box" style="">
+            <img src="images/a7.jpg">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Jogging Gardens/label></div>
+          </div>
+
+          <div class="box" style="">
+            <img src="images/a8.jpg">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Spacious Balcony</label></div>
+          </div>
+        
+      </div>
+    </div>
+
+    <div class="slide-element">
+      <div class="header" style="">
+      <div class="logo" style="">
+        <a href="#"><img src="https://services.google.com/fh/files/emails/crystal_logo1.png" alt="" /></a>
+      </div>
+     </div>
+      <div class="lates-project" style="background: transparent;     align-items: center; background-repeat: no-repeat; background-image: url(images/black-bg.jpeg); background-size: cover; background-position: 50% 50%; height: 100%; opacity: 1; top: 0px; left: 0px; visibility: inherit;">
+        <div class="delivered" >
+          <div class="delivered-box"><img src="images/amatrahomes.png"/></div>
+          
+        </div>
+
+        <div class="delivered">
+          <div class="flex-container" style="background-color: #282d32;">
+            <div style="padding: 58px 55px; text-align: left;">
+              <p class="about_head">OUR PROJECT</p>
+              <h1 class="about_subhead" style="margin-bottom: 0; color:#fff;">
+                Our Last Work
+              </h1>
+
+              <p class="about-deatils" style="width: 80%; color:#fff;">The project spreads over 5 acres of land with lot of green area and absolute fantastic design with podium concept. <br/><br/>
+Total Flats in Project is 926 and almost 800 flats already handover.
+OC received and Almost 300 registry has been done.<br/><br/>
+Amaatra Homes is undoubtedly delivered with a very excellent elevation and layouts with all amenities as it is designed by the best of the architects.<br/><br/>
+The Project Amaatra Homes Noida offers exclusive features like natural light and cross ventilation in all apartments, swimming pool, park and garden, separate walking track, security, fire fighting system, sports facilities, gym, club house, power back and 24 hours water supply.<br/><br/>
+The project covers CCTV camera at all common access points.<br/>
+Well managed basement parking.<br/>
+
+</p>
+
+              <a class="download" href="">Know More About Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-element" style="background: transparent;     align-items: center; background-repeat: no-repeat; background-image: url(images/price-bg.jpg); background-size: cover; background-position: 50% 50%; height: 100%; opacity: 1; top: 0px; visibility: inherit;">
+      <div class="header" style="">
+      <div class="logo" style="">
+        <a href="#"><img src="https://services.google.com/fh/files/emails/crystal_logo1.png" alt="" /></a>
+      </div>
+     </div>
+      <h2 class="aminite-head" style="margin-top: 51px; font-size: 48px;text-shadow: -1px 2px 3px black;font-weight: 600;">AMAATRA CRYSTAL - FLOOR PLAN™</h2>
+      <div class="verticle-tab" style="margin-top: 45px;">    
+        <div class="season_tabs">    
+           <div class="season_tab" style="">
+               <input type="radio" id="tab-1" name="tab-group-1" checked tabindex="0">
+               <label for="tab-1">4 BHK + 4 TOILET + SERVANT ROOM</label> 
+
+               <div class="season_content">
+                  <div class="season-holder">
+                    <div class="site-img"><img src="images/s3.png" alt="" style="position: relative;"></div>
+                   <div class="season-cell" style="">
+                      <table class="season-inner" style="border-bottom: 2px solid #9292a0;">
+                        <th>Particular</th><th>Sq.Mtr</th><th>Sq.Ft.</th>
+                      </table>
+                      <table class="season-inner">
+                        <td>Carpet Area</td><td>124.27</td><td>1337.64</td>
+                      </table>
+                      <table class="season-inner">
+                        <td>Carpet Area with Balcony</td><td>155.37</td><td>1672.4</td>
+                      </table>
+                      <table class="season-inner">
+                        <td>Super Area</td><td>234.58</td><td>2525</td>
+                      </table>
+                      <table class="season-inner">
+                        <td><a href="#" target="_blank" style="z-index: 111; position: absolute; width: 200px;
+    text-align: center;"><img src="images/price-list.png"/></a></td>
+                      </table>
+                   </div>
+                   
+                  </div>
+               </div> 
+           </div>    
+           <div class="season_tab">
+               <input type="radio" id="tab-2"  name="tab-group-1">
+               <label for="tab-2">3 BHK + 3 TOILET</label>
+               
+               <div class="season_content">
+                  <div class="season-holder">
+                    <div class="site-img"><img src="images/s2.png" alt="" style="position: relative;"></div>
+                   <div class="season-cell" style="">
+                    <table class="season-inner" style="border-bottom: 2px solid #9292a0;">
+                        <th>Particular</th><th>Sq.Mtr</th><th>Sq.Ft.</th>
+                      </table>
+                      <table class="season-inner">
+                        <td>Carpet Area</td><td>78.38</td><td>843.68</td>
+                      </table>
+                      <table class="season-inner">
+                        <td>Carpet Area with Balcony</td><td>95.43</td><td>1027.21</td>
+                      </table>
+                      <table class="season-inner">
+                        <td>Super Area</td><td>148.64</td><td>1600</td>
+                      </table>
+                   </div>
+                   
+                  </div>
+               </div> 
+           </div>    
+           <div class="season_tab">
+               <input type="radio" id="tab-3"  name="tab-group-1">
+               <label for="tab-3">2 BHK + 2 TOILET + STUDY</label>            
+               <div class="season_content">
+                  <div class="season-holder">
+                    <div class="site-img"><img src="images/s1.png" alt="" style="position: relative;"></div>
+                   <div class="season-cell" style="">
+                    <table class="season-inner" style="border-bottom: 2px solid #9292a0;">
+                        <th>Particular</th><th>Sq.Mtr</th><th>Sq.Ft.</th>
+                      </table>
+                      <table class="season-inner">
+                        <td>Carpet Area</td><td>64.53</td><td>694.60</td>
+                      </table>
+                      <table class="season-inner">
+                        <td>Carpet Area with Balcony</td><td>80.69</td><td>868.55</td>
+                      </table>
+                      <table class="season-inner">
+                        <td>Super Area</td><td>122.82</td><td>1322</td>
+                      </table>
+                   </div>
+                   
+                  </div>
+               </div> 
+           </div>
+
+           <div class="season_tab">
+               <input type="radio" id="tab-4"  name="tab-group-1">
+               <label for="tab-4">2 BHK + 2 TOILET</label>             
+               <div class="season_content">
+                  <div class="season-holder">
+                    <div class="site-img"><img src="images/s4.jpg" alt="" style="position: relative;"></div>
+                   <div class="season-cell" style="">
+                    <table class="season-inner" style="border-bottom: 2px solid #9292a0;">
+                        <th>Particular</th><th>Sq.Mtr</th><th>Sq.Ft.</th>
+                      </table>
+                      <table class="season-inner">
+                        <td>Carpet Area</td><td>57.48</td><td>618.71</td>
+                      </table>
+                      <table class="season-inner">
+                        <td>Carpet Area with Balcony</td><td>68.15</td><td>733.56</td>
+                      </table>
+                      <table class="season-inner">
+                        <td>Super Area</td><td>106.37</td><td>1145</td>
+                      </table>
+                   </div>
+                   
+                  </div>
+               </div> 
+           </div>
+            <div class="season_tab">
+               <input type="radio" id="tab-5"  name="tab-group-1">
+               <label for="tab-5">2 BHK + 2 TOILET</label>
+             
+               <div class="season_content">
+                  <div class="season-holder">
+                    <div class="site-img"><img src="images/s5.jpg" alt="" style="position: relative;"></div>
+                   <div class="season-cell" style="">
+                    <table class="season-inner" style="border-bottom: 2px solid #9292a0;">
+                        <th>Particular</th><th>Sq.Mtr</th><th>Sq.Ft.</th>
+                      </table>
+                      <table class="season-inner">
+                        <td>Carpet Area</td><td>53.78</td><td>578.89</td>
+                      </table>
+                      <table class="season-inner">
+                        <td>Carpet Area with Balcony</td><td>64.78</td><td>697.29</td>
+                      </table>
+                      <table class="season-inner">
+                        <td>Super Area</td><td>97.08</td><td>1045</td>
+                      </table>
+                   </div>
+                   
+                  </div>
+               </div> 
+           </div>
+          <!-- <div class="season_tab">
+           <input type="radio" id="tab-5" name="tab-group-1">
+           <a class="download pricing" style=" " href="">Download Pricing Table</a>
+         </div> -->
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js'></script>
+  
+  <script id="rendered-js" >
+const slider = $(".slider-item");
+slider.slick({
+  dots: false,
+   speed: 3000,
+   autoplay:false,
+  slidesToShow: 1,
+   fade: false,
+  cssEase: 'linear', 
+  adaptiveHeight: true,
+  responsive: [{
+      breakpoint: 900,
+      settings: "unslick",
+      infinite: true,
+    }]
+ });
+
+
+slider.on('wheel', function (e) {
+  e.preventDefault();
+
+  if (e.originalEvent.deltaY < 0) {
+    $(this).slick('slickNext');
+  } else {
+    $(this).slick('slickPrev');
+  }
+});
+
+
+    </script>
+
+   
+
+  
+
+</body>
+
+</html>
