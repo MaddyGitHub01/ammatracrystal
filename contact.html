@@ -179,8 +179,6 @@ h4{
     margin: 0 auto;
     padding: 15px 0;
     border-bottom: 1px solid #dbd8d8;
-
-
 }
 .season-inner i {
     padding-right: 10px;
@@ -228,9 +226,10 @@ footer p {
 .location {
       width: 100%;
       background: #1e2226;
-    /* height: 500px; */
-    display: table;
-    vertical-align: middle;
+      display: table;
+      vertical-align: middle;
+      position:relative;
+      z-index:11;
 }
 
 .product-thumbs .swiper-slide img {
@@ -327,6 +326,22 @@ footer p {
 .surrounding {
   color:#fff; margin: 45px auto 62px auto; text-align: center;
 }
+  
+  .location-img {
+  padding-left: 25px;
+}
+         .location-col {
+          transform: scale(1);
+         }
+         .location_zoom { 
+          transform: scale(1.8) !important;
+          transition: all .5s ease 0s;
+          padding-top: 0 !important;
+          top: 0;
+          z-index: 999;
+          position: absolute;
+          padding-left: 25%;        
+        }
 
 @media only screen and (max-width: 900px) {
   .cell, .tb-cell, textarea {width: 100%;}
@@ -354,7 +369,7 @@ footer p {
   <h1 class="surrounding" style="">CONTACT US</h1>
   <div class='container' >
     <div class="table location" style="background: #1e2226; margin-top: 35px;">
-      <div class="col"><img src="images/location.jpg" style="padding-left: 25px;" /></div>
+     <div class="col location-col"><img  class="location-img" src="images/location.jpg" style="" /></div>
       <div class="col" style="width: 40%;">
         <div class="season-cell" style="">
           <h2>Location Benefits</h2>
@@ -461,7 +476,13 @@ if ($(".it-heading").length) {
 /*  product left end */
     </script>
 
-  
+  <script type="text/javascript">
+         $(document).ready(function(){
+           $(".location-col").click(function(){
+              $(".location-img").toggleClass("location_zoom");
+            });
+            });
+      </script>
 
 </body>
 
