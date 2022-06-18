@@ -401,7 +401,7 @@ h4{
 }
 .site-img {
     padding: 15px 15px;
-   background: #fefefe;
+    background: #fefefe;
     border: 5px solid #884d04;
     transition: all .5s ease 0s; /* Friday */
 }
@@ -516,15 +516,14 @@ h4{
     width: 200px;
     text-align: center;
   }
-  .site-img img:hover {
-  transform: scale(2);
-    margin-top: 20px;
-    z-index: 222;
-    transition: all .5s ease 0s;
-  }
-  .site-img:hover ~ .season-cell {
-    visibility: hidden !important;
-  }
+  .floor_img {
+          transform: scale(1);
+         }
+         .zoom_img { 
+          transform: scale(2) !important;
+          transition: all .5s ease 0s;
+          padding-top: 0 !important;
+        }
 
 @media only screen and (max-width: 1440px) {
   .season_tabs {
@@ -950,7 +949,7 @@ Well managed basement parking.<br/>
 
                <div class="season_content">
                   <div class="season-holder">
-                    <div class="site-img"><img src="images/s3.png" alt="" style="position: relative;"></div>
+                    <div class="site-img"><img src="images/s3.png" alt="" style="position: relative;" class="floor_img"></div>
                    <div class="season-cell" style="">
                       <table class="season-inner" style="border-bottom: 2px solid #9292a0;">
                         <th>Particular</th><th>Sq.Mtr</th><th>Sq.Ft.</th>
@@ -978,7 +977,7 @@ Well managed basement parking.<br/>
                
                <div class="season_content">
                   <div class="season-holder">
-                    <div class="site-img"><img src="images/s2.png" alt="" style="position: relative;"></div>
+                    <div class="site-img"><img src="images/s2.png" alt="" style="position: relative;" class="floor_img"></div>
                    <div class="season-cell" style="">
                     <table class="season-inner" style="border-bottom: 2px solid #9292a0;">
                         <th>Particular</th><th>Sq.Mtr</th><th>Sq.Ft.</th>
@@ -1002,7 +1001,7 @@ Well managed basement parking.<br/>
                <label for="tab-3">2 BHK + 2 TOILET + STUDY</label>            
                <div class="season_content">
                   <div class="season-holder">
-                    <div class="site-img"><img src="images/s1.png" alt="" style="position: relative;"></div>
+                    <div class="site-img"><img src="images/s1.png" alt="" style="position: relative;" class="floor_img"></div>
                    <div class="season-cell" style="">
                     <table class="season-inner" style="border-bottom: 2px solid #9292a0;">
                         <th>Particular</th><th>Sq.Mtr</th><th>Sq.Ft.</th>
@@ -1027,7 +1026,7 @@ Well managed basement parking.<br/>
                <label for="tab-4">2 BHK + 2 TOILET</label>             
                <div class="season_content">
                   <div class="season-holder">
-                    <div class="site-img"><img src="images/s4.jpg" alt="" style="position: relative;"></div>
+                    <div class="site-img"><img src="images/s4.jpg" alt="" style="position: relative;" class="floor_img"></div>
                    <div class="season-cell" style="">
                     <table class="season-inner" style="border-bottom: 2px solid #9292a0;">
                         <th>Particular</th><th>Sq.Mtr</th><th>Sq.Ft.</th>
@@ -1052,7 +1051,7 @@ Well managed basement parking.<br/>
              
                <div class="season_content">
                   <div class="season-holder">
-                    <div class="site-img"><img src="images/s5.jpg" alt="" style="position: relative;"></div>
+                    <div class="site-img"><img src="images/s5.jpg" alt="" style="position: relative;" class="floor_img"></div>
                    <div class="season-cell" style="">
                     <table class="season-inner" style="border-bottom: 2px solid #9292a0;">
                         <th>Particular</th><th>Sq.Mtr</th><th>Sq.Ft.</th>
@@ -1194,6 +1193,13 @@ slider.slick({
         };
     </script>
       <script type="text/javascript"> jssor_1_slider_init(); </script>
+<script type="text/javascript">
+         $(document).ready(function(){
+           $(".site-img, .location").click(function(){
+              $(".site-img img, .location_img").toggleClass("zoom_img");
+            });
+            });
+      </script>
 
 </body>
 
